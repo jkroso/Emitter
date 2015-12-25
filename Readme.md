@@ -9,16 +9,10 @@ This allows you to define subscriptions on the class rather than on each instanc
 
 ## Installation
 
-With your favourite package manager:
-
-- [packin](//github.com/jkroso/packin): `packin add jkroso/emitter`
-- [component](//github.com/component/component#installing-packages): `component install jkroso/emitter`
-- [npm](//npmjs.org/doc/cli/npm-install.html): `npm install jkroso/emitter`
-
-then in your app:
+`npm install @jkroso/emitter`
 
 ```javascript
-var Emitter = require('emitter')
+import Emitter from 'emitter'
 ```
 
 ## API
@@ -66,7 +60,3 @@ emitter.off('topic', fn) // as above but only where `listener == fn`
 ### Emitter.subscriptions(emitter, topic)
 
   get an Array of subscriptions for `topic`
-
-## Running the tests
-
-run `make` then navigate your browser to [test/index.html](test/index.html)

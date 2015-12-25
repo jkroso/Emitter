@@ -1,20 +1,17 @@
-
 <title>emitter tests</title>
-<link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+<link rel="stylesheet" href="../node_modules/hydro-html/index.css">
 
-<div id="mocha"></div>
+<div id="hydro"></div>
 
 <script>
-	var mocha = require('mocha')
+  import Hydro from 'hydro'
+  var hydro = new Hydro
 
-	mocha.setup({
-		reporter: 'html',
-		timeout: 200,
-		bail: true,
-		ui: 'bdd'
-	})
+  require('./hydro.conf')(hydro)
+  hydro.set('formatter', require('hydro-html'))
+  hydro.setup()
 
-	require('./emitter.test')
+  require('./emitter.test')
 
-	mocha.run()
+  hydro.run()
 </script>

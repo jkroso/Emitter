@@ -6,6 +6,6 @@ global.expect = chai.expect
 global.assert = chai.assert
 chai.use(require('chai-spies'))
 
-chai.Assertion.includeStack = true
+chai.config.includeStack = true
 
 module.exports = chai
